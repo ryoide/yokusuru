@@ -50,6 +50,8 @@ test:
 production:
   <<: *default
   encoding: utf8
+  host: 10.0.2.10
   database: yokusuru_production
   username: ideryo
   password: <%= ENV['YOKUSURU_DATABASE_PASSWORD'] %>
+
