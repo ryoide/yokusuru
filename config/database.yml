@@ -54,4 +54,5 @@ production:
   database: yokusuru_production
   username: ideryo
   password: <%= ENV['YOKUSURU_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
 
