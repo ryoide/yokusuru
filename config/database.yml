@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  encoding: utf8
   database: yokusuru_production
-  username: yokusuru
+  username: ideryo
   password: <%= ENV['YOKUSURU_DATABASE_PASSWORD'] %>
