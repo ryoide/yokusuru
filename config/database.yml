@@ -19,7 +19,12 @@ default: &default
 
 development:
   <<: *default
+  encoding: utf8
+  host: 10.0.2.10
   database: yokusuru_development
+  username: ideryo
+  password: <%= ENV['YOKUSURU_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
