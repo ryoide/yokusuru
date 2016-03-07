@@ -20,7 +20,7 @@ default: &default
 development:
   <<: *default
   encoding: utf8
-  host: ip-10-0-1-10.ap-northeast-1.compute.internal
+  host: mysql://10.0.2.10:3306
   database: yokusuru_development
   username: ideryo
   password: <%= ENV['YOKUSURU_DATABASE_PASSWORD'] %>
