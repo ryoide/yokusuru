@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160314061653) do
+ActiveRecord::Schema.define(version: 20160314065404) do
 
   create_table "teams", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -38,6 +38,11 @@ ActiveRecord::Schema.define(version: 20160314061653) do
     t.string   "unconfirmed_email",      limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
+    t.string   "name",                   limit: 255
+    t.string   "role",                   limit: 255
+    t.integer  "point",                  limit: 4
+    t.integer  "team_id",                limit: 4
+    t.integer  "problem_id",             limit: 4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
