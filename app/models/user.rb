@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   #accessor
   attr_accessor :team_name
+
+  #association
+  belongs_to :team
 end
