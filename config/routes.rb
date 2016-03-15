@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'top#index'
   get  'home' => 'home#index'
   resources :users, :only => [:show, :edit, :update]
+  resources :teams, :only => [:show, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
