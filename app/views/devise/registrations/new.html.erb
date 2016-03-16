@@ -23,6 +23,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :グループ名（半角英数） %><br />
+    <%= f.text_field :team_name, autofocus: true %>
+  </div>
+
   <div class="actions">
     <%= f.submit "登録" %>
   </div>
