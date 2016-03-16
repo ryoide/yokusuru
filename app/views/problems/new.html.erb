@@ -1,0 +1,7 @@
+<div>
+<%= form_for(@problem) do |f| %>
+    <%= f.text_area :problem, placeholder: "問題点(例:ゴミがよく落ちてる)", :size=>"60x3" %>
+    <%= f.text_area :plan, placeholder: "改善案(例:ゴミ箱をもっと設置する)", :size=>"60x3" %>
+    <%= f.submit "投稿する" %>
+<% end %>
+</div>

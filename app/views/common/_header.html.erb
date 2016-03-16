@@ -5,6 +5,7 @@
       <%= link_to 'ロゴ', root_path %>
     </div>
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "投稿する", new_problem_path %></li>
         <li><a href="/home">ホーム</a></li>
         <li><%= link_to "#{current_user.team.name}", team_path(current_user.id) %></li>
         <li class="dropdown">
