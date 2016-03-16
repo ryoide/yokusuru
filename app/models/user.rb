@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   #association
   belongs_to :team
+  has_many :problems, ->{ order("updated_at DESC") }
 
   #validation
   before_validation :team_name_to_id, if: :has_team_key?
