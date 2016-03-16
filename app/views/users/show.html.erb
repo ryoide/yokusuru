@@ -1,0 +1,10 @@
+
+<div class="contents">
+    <div class ="container">
+		<div>
+		<img src="<%= current_user.avatar.url(:medium) %>">
+		<li><%= link_to "プロフィール編集", edit_user_path(current_user.id) %></li>
+		</div>
+
+	</div>
+</div>
