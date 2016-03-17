@@ -1,4 +1,5 @@
 class ProblemsController < ApplicationController
+	before_action :authenticate_user!
 	def new
 		@problem = Problem.new
 	end
