@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :teams, :only => [:show, :edit, :update]
   resources :problems, :only => [:new, :create, :show, :edit, :update]
   resources :ranking, :only => [:show]
+  post 'like/:problem_id' => 'likes#like', as: 'like'
+  delete 'unlike/:problem_id' => 'likes#unlike', as: 'unlike'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
