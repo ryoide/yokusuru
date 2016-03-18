@@ -11,5 +11,8 @@
   		</div>
   	</div>
     <p><span class="left"><%= problem.problem %></span><span class="right"><%= problem.plan %></span></p>
-  </div> 
+  </div>
+  <div>
+    <%= link_to 'いいね', like_path(problem.id), method: :post %>
+  </div>
 </section>
