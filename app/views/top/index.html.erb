@@ -1,11 +1,9 @@
-<%= link_to 'ログイン', new_user_session_path %></br>
-<%= link_to '登録する', new_user_registration_path %>
 <div class="top-header">
     <div class="logo">
       <a href="#">Yokusuru</a><!-- とりあえずロゴができるまでaタグ -->
     </div>
     <div class="header-right">
-      <button type="button" class="btn btn-default">ログイン</button>
+      <button type="button" class="btn btn-default" onclick="location.href='/users/sign_in'">ログイン</button>
       <button type="button" class="btn btn-default">ランキング</button>
     </div>
   </div> 
@@ -14,13 +12,13 @@
   <!-- ここから画像のとこ -->
   <div class="top-head">
     <div class="top-image">
-      <img src="image/ore.png" alt="top" class="col-md-12">
+      <%= image_tag "ore.png", :class => "col-md-12" %>
     </div>
     <div class="top-text">
       <p>チームを「よくする」プラットフォームをここに。</p>
     </div>
     <div class="top-new-account">
-      <button type="button" class="btn btn-primary" onclick="location.href='#'">新規登録</button>
+      <button type="button" class="btn btn-primary" onclick="location.href='/users/sign_up'">新規登録</button>
     </div>
   </div>
   <!-- ここまで -->
@@ -43,7 +41,7 @@
     </div>
     <div class="col-md-4">
       <div class="top-body-image">
-        <img src="image/heart.png" alt="aaa" width="150px" height="150px">
+        <%= image_tag "heart.png", :width => "150px", :height => "150px" %>
       </div>
       <div class="top-body-text">
         <p>使いやすい！</p>
@@ -52,7 +50,7 @@
 
     <div class="col-md-4">
       <div class="top-body-image">
-        <img src="image/battle.png" alt="aaa" width="150px" height="150px">
+        <%= image_tag "battle.png", :width => "150px", :height => "150px" %>
       </div>
       <div class="top-body-text">
         <p>競い合える！</p>
@@ -61,8 +59,7 @@
 
     <div class="col-md-4">
       <div class="top-body-image">
-        <img src="image/free.png" alt="aaa" width="150px" height="150px">
-      </div>
+        <%= image_tag "free.png", :width => "150px", :height => "150px" %>
       <div class="top-body-text">
         <p>完全無料！</p>
       </div>
@@ -83,11 +80,11 @@
     <table>
       <tr>
         <td>お名前</td>
-        <td><input type="text" placeholder="田中太郎"></td>
+        <td><input type="text" placeholder="必須"></td>
       </tr>
       <tr>
         <td>メールアドレス</td>
-        <td><input type="text" placeholder="yokusuru@example.com"></td>
+        <td><input type="text" placeholder="必須"></td>
       </tr>
       <tr>
         <td>お問い合わせ内容</td>
