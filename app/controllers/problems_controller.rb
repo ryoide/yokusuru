@@ -5,7 +5,7 @@ class ProblemsController < ApplicationController
 	end
 
 	def create
-		Problem.create(problem: create_params[:problem], plan: create_params[:plan], user_id: current_user.id, team_id: current_user.team_id)
+		Problem.create(problem: create_params[:problem], plan: create_params[:plan], user_id: current_user.id, team_id: current_user.team_id, done: 0)
     	redirect_to :root and return
 	end
 
