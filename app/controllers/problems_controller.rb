@@ -9,6 +9,13 @@ class ProblemsController < ApplicationController
     	redirect_to :root and return
 	end
 
+	def edit
+		problem = Problem.find(params[:id])
+		problem.done = problem.done + 1
+		problem.save
+		redirect_to :root and return
+	end
+
 	private
 	def create_params
 		params.require(:problem).permit(:problem, :plan)

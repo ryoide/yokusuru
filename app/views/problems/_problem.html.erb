@@ -26,4 +26,13 @@
   <div id="like-count">
     <%= problem.likes.count %>人がいいねと言っています
   </div>
+  <% if problem.done == 0 %>
+    <div>
+      <%= link_to '実行中にする', edit_problem_path(problem.id) %>
+    </div>
+  <% elsif problem.done == 1 %>
+    <div>
+      <%= link_to '完了する', edit_problem_path(problem.id) %>
+    </div>
+  <% end %>
 </section>
