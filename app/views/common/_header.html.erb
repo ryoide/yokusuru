@@ -13,6 +13,7 @@
             <li><%= link_to "マイページ", user_path(current_user.id) %></li>
             <li><%= link_to "ランキング", ranking_path(current_user.team.id) %></li>
             <li><%= link_to "#{current_user.team.name}", team_path(current_user.team.id) %></li>
+            <li><%= link_to "お問い合わせ", new_contact_path %></li>
             <li class="divider"></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           </ul>
