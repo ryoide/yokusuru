@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post 'like/:problem_id' => 'likes#like', as: 'like'
   delete 'unlike/:problem_id' => 'likes#unlike', as: 'unlike'
   resources :contact, :only => [:new, :create]
+  get 'home/doing' => 'home#doing'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

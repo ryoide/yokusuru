@@ -4,4 +4,8 @@ class HomeController < ApplicationController
 	def index
 		@problems = current_user.team.problems
 	end
+
+	def doing
+		@problems = current_user.team.problems
+	end
 end

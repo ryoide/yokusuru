@@ -6,7 +6,11 @@
     </div>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "投稿する", new_problem_path %></li>
+        <% if request.path_info != "/home" %>
         <li><a href="/home">提案中</a></li>
+        <% elsif request.path_info != "/home/doing" %>
+        <li><a href="/home/doing">改善中</a></li>
+        <% end %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= image_tag "#{current_user.avatar}", :width => "20px", :height => "20px", :class => "img-circle" %><%= current_user.name %> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
