@@ -1,10 +1,11 @@
 <%= render partial: 'common/header' %>
 
-	<% if current_user.team.problems.exists? == false %>
-		<div>
-			<p>投稿がありません</p>
-		<div>
-	<% end %>
-  	<div>
-      <%= render partial: 'problems/problem', collection: @problems %>
-  	</div>
+<% if current_user.team.problems.exists? == false %>
+	<div>
+		<p>投稿がありません</p>
+	<div>
+<% end %>
+
+<div>
+    <%= render partial: 'problems/problem', collection: @problems %>
+</div>
