@@ -2,7 +2,7 @@
 
 <h1>改善中</h1>
 
-<% if current_user.team.problems.exists? == false %>
+<% if current_user.team.problems.where(done: 1).exists? == false %>
 	<div>
 		<p>投稿がありません</p>
 	<div>
