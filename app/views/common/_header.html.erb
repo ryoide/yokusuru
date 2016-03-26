@@ -8,7 +8,8 @@
         <li><%= link_to "投稿する", new_problem_path %></li>
         <% if request.path_info != "/home" %>
         <li><a href="/home">提案中</a></li>
-        <% elsif request.path_info != "/home/doing" %>
+        <% end %>
+        <% if request.path_info != "/home/doing" %>
         <li><a href="/home/doing">改善中</a></li>
         <% end %>
         <li class="dropdown">

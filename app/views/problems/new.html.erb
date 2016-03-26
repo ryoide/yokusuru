@@ -1,3 +1,5 @@
+<%= render partial: 'common/header' %>
+
 <div>
 <%= form_for(@problem) do |f| %>
     <%= f.text_area :problem, placeholder: "問題点(例:ゴミがよく落ちてる)", :size=>"60x3" %>
