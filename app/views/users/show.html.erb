@@ -3,13 +3,17 @@
 <div class="contents">
     <div class ="container">
 		<div>
-			<% if current_user.avatar %>
-				<img src="<%= current_user.avatar.url(:medium) %>">
+			<% if @user.avatar_file_name.empty? == true %>
+				<%= image_tag "aka.jpg" %>
 			<% else %>
-				<%= image_tag "aka.png" %>
+				<img src="<%= @user.avatar.url(:medium) %>">
 			<% end %>
-			<li><%= link_to "プロフィール編集", edit_user_path(current_user.id) %></li>
+			<p><%= @user.name %></p>
+			<%= link_to "プロフィール編集", edit_user_path(current_user.id) %>
 		</div>
+<div>
+    <%= render partial: 'problems/problem', collection: @problems %>
+</div>
 
 	</div>
 </div>
