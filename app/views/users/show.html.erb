@@ -4,9 +4,9 @@
     <div class ="container">
 		<div>
 			<% if @user.avatar.file? == true %>
-				<%= image_tag "aka.jpg" %>
-			<% else %>
 				<img src="<%= @user.avatar.url(:medium) %>">
+			<% else %>
+				<%= image_tag "aka.jpg" %>
 			<% end %>
 			<p><%= @user.name %></p>
 			<%= link_to "プロフィール編集", edit_user_path(current_user.id) %>
