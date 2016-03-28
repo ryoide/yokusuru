@@ -3,7 +3,7 @@
 <div class="contents">
     <div class ="container">
 		<div>
-			<% if @user.avatar_file_name.empty? == true %>
+			<% if @user.avatar.file? == true %>
 				<%= image_tag "aka.jpg" %>
 			<% else %>
 				<img src="<%= @user.avatar.url(:medium) %>">

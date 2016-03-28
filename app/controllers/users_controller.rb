@@ -10,7 +10,6 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
-
 	def update
 		current_user.update(update_params)
 	end
