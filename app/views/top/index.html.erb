@@ -1,7 +1,6 @@
-<div class="top-header">
-    <div class="logo">
+  <!-- ここからヘッダー -->
+  <div id="top-header">
       <a href="#">Yokusuru</a><!-- とりあえずロゴができるまでaタグ -->
-    </div>
     <div class="header-right">
       <button type="button" class="btn btn-default" onclick="location.href='/users/sign_in'">ログイン</button>
       <button type="button" class="btn btn-default">ランキング</button>
@@ -13,93 +12,91 @@
   <div class="top-head">
     <div class="top-image">
       <%= image_tag "ore.png", :class => "col-md-12" %>
-    </div>
-    <div class="top-text">
-      <p>チームを「よくする」プラットフォームをここに。</p>
-    </div>
-    <div class="top-new-account">
-      <button type="button" class="btn btn-primary" onclick="location.href='/users/sign_up'">新規登録</button>
+      <div class="top-text">
+        <p>チームを「よくする」プラットフォームをここに。</p>
+      </div>
+      <div class="top-new-account">
+        <button type="button" class="btn btn-primary" onclick="location.href='#'">新規登録</button>
+      </div>
     </div>
   </div>
   <!-- ここまで -->
 
+  <div class="gray">
   <!-- yokusuruとは -->
-  <div class="what-we-do">
+  <div id="what-we-do" class="block">
     <div class="about-us">
-      <p>Yokusuruとは</p>
+      <p>Yokusuruで何をするの？</p>
     </div>
     <div class="top-instraction">
-      <p>Yokusuruはチーム内の至らないところを投稿し、</br>それが得点になり、他のチームと競い合えます。</p>
+      <p>Yokusuruではチーム内のよくないところとその改善案を投稿し、チーム内で解決します。</br>解決していくとポイントが入り、他のチームとポイントを競い合えます。</p>
     </div>
   </div>
   <!-- ここまで -->
 
   <!-- ここからYokusuruとは -->
-  <div class="top-body">
+  <div id="top-body" class="block">
     <div class="about-us">
       <p>Yokusuruの特徴</p>
     </div>
-    <div class="col-md-4">
-      <div class="top-body-image">
-        <%= image_tag "heart.png", :width => "150px", :height => "150px" %>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="top-body-image">
+          <%= image_tag "heart.png", :width => "150px", :height => "150px" %>
+        </div>
+        <div class="concept">
+          <p>使いやすい！</p>
+        </div>
+        <div class="text">
+          <p>チーム改善専用のため管理がしやすく、投稿が流れにくい。</p>
+        </div>
       </div>
-      <div class="top-body-text">
-        <p>使いやすい！</p>
-      </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="top-body-image">
-        <%= image_tag "battle.png", :width => "150px", :height => "150px" %>
+      <div class="col-md-4">
+        <div class="top-body-image">
+          <%= image_tag "battle.png", :width => "150px", :height => "150px" %>
+        </div>
+        <div class="concept">
+          <p>競い合える！</p>
+        </div>
+        <div class="text">
+          <p>サービスを利用するほど改善ポイントが貯まっていき、<br/>その合計点で全ユーザーで競い合います。</p>
+        </div>
       </div>
-      <div class="top-body-text">
-        <p>競い合える！</p>
-      </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="top-body-image">
-        <%= image_tag "free.png", :width => "150px", :height => "150px" %>
-      </div>
-      <div class="top-body-text">
-        <p>完全無料！</p>
+      <div class="col-md-4">
+        <div class="top-body-image">
+          <%= image_tag "free.png", :width => "150px", :height => "150px" %>
+        </div>
+        <div class="concept">
+          <p>完全無料！</p>
+        </div>
+        <div class="text">
+          <p>どれだけ投稿しても、どれだけ人数を増やしても、<br/>yokusuruの利用には費用は一切かかりません。</p>
+        </div>
       </div>
     </div>
   </div>
   <!-- ここまで -->
-
-  <!-- ここからよくある質問　事例 -->
-  <div class="top-example">
   </div>
-  <!-- ここまで -->
 
   <!-- ここからお問い合わせ -->
-  <div class="top-contact-us">
+  <div id="contact-us" class="block">
     <div class="about-us">
       <p>お問い合わせ</p>
     </div>
-    <table>
-      <tr>
-        <td>お名前</td>
-        <td><input type="text" placeholder="必須"></td>
-      </tr>
-      <tr>
-        <td>メールアドレス</td>
-        <td><input type="text" placeholder="必須"></td>
-      </tr>
-      <tr>
-        <td>お問い合わせ内容</td>
-        <td><input type="text" ></td>
-      </tr>
-    </table>
-    <input type="button" value="送信">
+    <div class="contact-us-left">
+      <p>yokusuruではサービスを一緒によくするスタッフを募集しております。お気軽にご連絡ください。また、その他お問い合わせもお待ちしております。</p>
+    </div>
+    <div class="contact-us-right">
+      <button type="button" class="btn btn-primary">運営スタッフに応募</button>
+      <button type="button" class="btn btn-primary">その他お問い合わせ</button>
+    </div>
   </div>
   <!-- ここまで -->
 
   <!-- ここから新規登録 -->
-  <div class="top-create-new-account">
-    <div class="new-account">
-      <a href="#">新規登録</a>
+    <div id="new-account">
+      <button type="button" class="btn btn-primary">さっそく始める！</button>
     </div>
-  </div>
   <!-- ここまで -->  
