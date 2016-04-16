@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'top#index'
   get  'home' => 'home#index'
-  resources :users, :only => [:show, :edit, :update]
+  resources :users, :only => [:show, :edit, :update, :destroy]
   resources :teams, :only => [:show, :edit, :update]
   resources :problems, :only => [:new, :create, :show, :edit, :update]
   resources :ranking, :only => [:show]

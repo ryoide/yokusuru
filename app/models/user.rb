@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   #association
   belongs_to :team
-  has_many :problems, ->{ order("updated_at DESC") }
+  has_many :problems, ->{ order("updated_at DESC") }, :dependent => :destroy
   has_many :likes
 
   #validation
