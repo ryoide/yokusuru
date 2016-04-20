@@ -6,6 +6,8 @@ class ProblemsController < ApplicationController
 
 	def create
 		Problem.create(problem: create_params[:problem], plan: create_params[:plan], user_id: current_user.id, team_id: current_user.team_id, done: 0)
+		current_user.point +=1
+		current_user.save
     	redirect_to :root and return
 	end
 
