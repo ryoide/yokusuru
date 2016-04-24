@@ -14,5 +14,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :team_name
     # sign_upのときに、nameも許可する
     devise_parameter_sanitizer.for(:sign_up) << :name
+    # sign_upのときに、pointも許可する
+    devise_parameter_sanitizer.for(:sign_up) << :point
   end
 end
