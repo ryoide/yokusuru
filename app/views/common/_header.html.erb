@@ -2,16 +2,11 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <%= link_to (image_tag "Y.png", :class => "navbar-brand"), root_path %>
+      <%= link_to (image_tag "yokusuru.png", :class => 'logophoto'), root_path %>
     </div>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "投稿する", new_problem_path %></li>
-        <% if request.path_info != "/home" %>
-        <li><a href="/home">提案中</a></li>
-        <% end %>
-        <% if request.path_info != "/home/doing" %>
-        <li><a href="/home/doing">改善中</a></li>
-        <% end %>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <% if current_user.avatar.file? == true %>

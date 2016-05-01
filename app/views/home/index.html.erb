@@ -1,13 +1,75 @@
+<body style="background-image:url(<%= asset_path "yy.png" %>); margin: 0;">
 <%= render partial: 'common/header' %>
 
-<h1>提案中</h1>
+<!-- ここからメイン -->
+<div class="fixing-base">
 
-<% if current_user.team.problems.where(done: 0).exists? == false %>
-	<div>
-		<p>投稿がありません</p>
-	<div>
-<% end %>
+  <div class="side-bar">
+      <div>
+        <a class="teian1" href="#"><p class="sidemenu1">提案中</p></a>
+      </div>
 
-<div>
-    <%= render partial: 'problems/problem', collection: @problems %>
+      <div>
+        <a class="zikkou2" href=""><p class="sidemenu2">実行中</p></a>
+      </div>
+
+
+  <form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="検索">
+    </div>
+      <button type="submit" class="btn btn-default">検索</button>
+  </form>
+
+
+      <div class="copyright">
+        <p>Copyright &copy; Yokusuru</p>
+      </div>
+  </div>
 </div>
+
+
+<div class="boxA">
+  <div class="home-center">
+  	<% if current_user.team.problems.where(done: 0).exists? == false %>
+		<div>
+			<p>投稿がありません</p>
+		<div>
+	<% end %>
+
+	<div>
+    	<%= render partial: 'problems/problem', collection: @problems %>
+	</div>
+  </div>
+</div>
+<!-- 説明タブ -->
+<!-- フッターは無し -->
+
+<script type="text/javascript">
+
+function(){
+  // 固定する場所が存在することの確認
+  if( $('.fixing-base .side-bar').length > 0 ){
+    var baseSelector = '.fixing-base'
+    var fixingSelector = baseSelector + ' .fixing-box'
+
+    $(window).on('load scroll resize', function(){
+      var baseTop = $(baseSelector).offset().top
+
+      //固定開始位置より後にスクロールされた場合
+      if( $(window).scrollTop() > baseTop ){
+        $(fixingSelector).addClass('fixed')
+        $(baseSelector).height($(fixingSelector).outerHeight())
+        $(fixingSelector).width($(baseSelector).width())
+
+      //固定開始位置以前にスクロールされた場合
+      } else {
+        $(fixingSelector).removeClass('fixed')
+        $(baseSelector).height('')
+        $(fixingSelector).width('')
+      }
+    })
+  }
+}
+</script>
+</body>

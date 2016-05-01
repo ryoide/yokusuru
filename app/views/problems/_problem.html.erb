@@ -1,4 +1,4 @@
-<section class="col-md-12">
+<!-- <section class="col-md-12">
   <br />
   <div class="sct_inner">
     <div class="profile">
@@ -39,4 +39,55 @@
       <%= link_to '完了する', edit_problem_path(problem.id) %>
     </div>
   <% end %>
+</section> -->
+
+<section class="proposal">
+   <div class="name">
+     <% if problem.user.avatar.file? == true %>
+          <img src="<%= problem.user.avatar.url(:medium) %>" class="img-thumbnail" width="80px" height="80px">
+     <% else %>
+          <%= image_tag "aka.jpg", :width => "80px", :height => "80px", :class => "img-thumbnail" %>
+     <% end %>
+     <p><%= link_to problem.user.name, user_path(problem.user) %></p>
+     <time><%= time_ago_in_words problem.updated_at %>前</time>
+   </div>
+  <div class="YES">
+    <% if problem.likes.count * 100 / problem.team.users.count > 50 %>
+      <% if problem.done == 0 %>
+        <%= link_to '実行中にする', edit_problem_path(problem.id) %>
+      <% elsif problem.done == 1 %>
+        <%= link_to '完了する', edit_problem_path(problem.id) %>
+      <% end %>
+    <% end %>
+  </div>
+      
+    <div class="content">
+        <%= problem.problem %>
+    </div>
+
+    <div class="content2">
+        <%= problem.plan %>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%;" id="like-rate">
+          <p><%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%</p>
+      </div>
+    </div>
+    <div id="like-link" class="good">
+      <% if current_user.likes.find_by(problem_id: problem.id) %>
+        <div>
+          <%= link_to 'いいねを取り消す', unlike_path(problem.id), method: :delete, remote: true %>
+        </div>
+      <% else %>
+        <div>
+          <%= link_to 'いいね!', like_path(problem.id), method: :post, remote: true %>
+        </div>
+      <% end %>
+    </div> 
+      <a class="comment" href="">コメント</a>
+    <div id="like-count">
+      <%= problem.likes.count %>人がいいねと言っています
+    </div>
+
 </section>
