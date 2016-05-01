@@ -1,46 +1,3 @@
-<!-- <section class="col-md-12">
-  <br />
-  <div class="sct_inner">
-    <div class="profile">
-      <div class="image">
-        <% if problem.user.avatar.file? == true %>
-          <img src="<%= problem.user.avatar.url(:medium) %>" class="img-thumbnail" width="80px" height="80px">
-        <% else %>
-          <%= image_tag "aka.jpg", :width => "80px", :height => "80px", :class => "img-thumbnail" %>
-        <% end %>
-      </div>
-      <div class="intro">
-        <span><%= link_to problem.user.name, user_path(problem.user) %></span>
-        <time><%= time_ago_in_words problem.updated_at %>前</time>
-      </div>
-    </div>
-    <p><span class="left"><%= problem.problem %></span><span class="right"><%= problem.plan %></span></p>
-  </div>
-  <div id="like-link">
-    <% if current_user.likes.find_by(problem_id: problem.id) %>
-      <div>
-        <%= link_to 'いいねを取り消す', unlike_path(problem.id), method: :delete, remote: true %>
-      </div>
-    <% else %>
-      <div>
-        <%= link_to 'いいね', like_path(problem.id), method: :post, remote: true %>
-      </div>
-    <% end %>
-  </div>
-  <div id="like-count">
-    <%= problem.likes.count %>人がいいねと言っています
-  </div>
-  <% if problem.done == 0 %>
-    <div>
-      <%= link_to '実行中にする', edit_problem_path(problem.id) %>
-    </div>
-  <% elsif problem.done == 1 %>
-    <div>
-      <%= link_to '完了する', edit_problem_path(problem.id) %>
-    </div>
-  <% end %>
-</section> -->
-
 <section class="proposal">
    <div class="name">
      <% if problem.user.avatar.file? == true %>
@@ -70,23 +27,19 @@
     </div>
 
     <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%;" id="like-rate">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%;">
           <p><%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%</p>
       </div>
     </div>
-    <div id="like-link" class="good">
+    <div class="like-link<%= problem.id %> good">
       <% if current_user.likes.find_by(problem_id: problem.id) %>
-        <div>
           <%= link_to 'いいねを取り消す', unlike_path(problem.id), method: :delete, remote: true %>
-        </div>
       <% else %>
-        <div>
           <%= link_to 'いいね!', like_path(problem.id), method: :post, remote: true %>
-        </div>
       <% end %>
     </div> 
       <a class="comment" href="">コメント</a>
-    <div id="like-count">
+    <div id="like-count<%= problem.id %>">
       <%= problem.likes.count %>人がいいねと言っています
     </div>
 
