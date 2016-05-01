@@ -447,10 +447,6 @@ img.col-md-12{
 		
 	}
 
-
-
-
-
 /*パーセント部分*/
 			.progress{
 				border:solid 2px gray;
@@ -465,4 +461,16 @@ img.col-md-12{
 
 }
 
-/*説明タブ*/
+.contacts{
+	text-align: center;
+	margin: 180px auto;
+	padding: 3% 10% 350px 10%;
+	background-color: white;
+    box-shadow: 1px 1px 8px gray;
+}
+
+.form-group textarea{
+	resize: none;
+	height: 100px;
+	width: 180px;
+}
