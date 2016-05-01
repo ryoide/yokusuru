@@ -1,9 +1,9 @@
 <%= render partial: 'common/header' %>
 
-<div style="padding-top: 110px;">
+<div style="padding-top: 100px; text-align: center;">
 <%= form_for(@problem) do |f| %>
-    <%= f.text_area :problem, placeholder: "問題点(例:ゴミがよく落ちてる)", :size=>"60x3" %>
-    <%= f.text_area :plan, placeholder: "改善案(例:ゴミ箱をもっと設置する)", :size=>"60x3" %>
-    <%= f.submit "投稿する" %>
+    <%= f.text_area :problem, placeholder: "問題点(例:ゴミがよく落ちてる)", :size=>"60x3", :style => "width: 500px; height:500px; resize: none; border-color: orange;" %>
+    <%= f.text_area :plan, placeholder: "改善案(例:ゴミ箱をもっと設置する)", :size=>"60x3", :style => "width: 500px; height:500px; resize: none; border-color: orange;" %>
+    <%= f.submit "投稿する", :style => "width: 10%; margin: 0 30% 0 30%;" %>
 <% end %>
 </div>
