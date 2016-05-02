@@ -4,49 +4,47 @@
 <!-- ここからメイン -->
 <div class="fixing-base">
 
-  <div class="side-bar">
-      <div>
-        <a class="teian1" href="#"><p class="sidemenu1">提案中</p></a>
-      </div>
-
-      <div>
-        <a class="zikkou2" href=""><p class="sidemenu2">実行中</p></a>
-      </div>
+	<div class="side-bar">
+    	<a class="teian1" href="javascript:;" onclick="Display('proposal')" ><p class="sidemenu1" id="SW1">提案中</p></a>
+	    <a class="zikkou2" href="javascript:;" onclick="Display('doing')"><p class="sidemenu2" id="SW2">実行中</p></a>
 
 
-  <form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="検索">
-    </div>
-      <button type="submit" class="btn btn-default">検索</button>
-  </form>
+  		<form class="navbar-form navbar-left" role="search">
+    		<div class="form-group">
+    	  		<input type="text" class="form-control" placeholder="検索">
+    		</div>
+      		<button type="submit" class="btn btn-default">検索</button>
+		</form>
 
 
-      <div class="copyright">
-        <p>Copyright &copy; Yokusuru</p>
-      </div>
-  </div>
-</div>
+    	<div class="copyright">
+      		<p>Copyright &copy; Yokusuru</p>
+    	</div>
+  	</div>
 
-<div class="boxA">
-  <div class="home-center">
-  	<% if current_user.team.problems.where(done: 0).exists? == false %>
-		<div>
-			<p>投稿がありません</p>
-		<div>
-	<% end %>
-
-	<div>
-    	<%= render partial: 'problems/problem', collection: @problems %>
+	<div class="boxA">
+  		<div class="home-center">
+  			<% if current_user.team.problems.where(done: 0).exists? == false %>
+				<div>
+					<p>投稿がありません</p>
+				<div>	
+			<% end %>
+			<div id="problem">
+    			<%= render partial: 'problems/problem', collection: @problems %>
+			</div>
+			<div id="proposal" style="display:none;">
+    			<%= render partial: 'problems/problem', collection: @proposals %>
+			</div>
+  		</div>
 	</div>
-  </div>
 </div>
 <!-- 説明タブ -->
 <!-- フッターは無し -->
 
+
 <script type="text/javascript">
 
-function(){
+function(){//サイドバー固定
   // 固定する場所が存在することの確認
   if( $('.fixing-base .side-bar').length > 0 ){
     var baseSelector = '.fixing-base'
@@ -71,4 +69,21 @@ function(){
   }
 }
 </script>
+
+<script language="javascript" type="text/javascript">
+ function Display(no){//タブ化
+     if(no == "proposal"){
+         document.getElementById("problem").style.display = "block";
+         document.getElementById("proposal").style.display = "none";
+         document.getElementById("SW1").style.color = "orange";
+         document.getElementById("SW2").style.color = "white";
+     }else if(no == "doing"){
+         document.getElementById("problem").style.display = "none";
+         document.getElementById("proposal").style.display = "block";
+         document.getElementById("SW1").style.color = "white";
+         document.getElementById("SW2").style.color = "orange";
+     }
+ }
+ </script>
+
 </body>
