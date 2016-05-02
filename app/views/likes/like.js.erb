@@ -3,4 +3,4 @@ $('.like-link<%= @problem.id %>').html('いいねしました');
 $('#like-count<%= @problem.id %>').html('<%= @problem.likes.count %>人がいいねと言っています');
 
 $('#like-rate<%= @problem.id %>').html('<%= (@problem.likes.count * 100 / @problem.team.users.count).round(0) %>%');
-$('#like-rate<%= @problem.id %>').css('width', '<%= (@problem.likes.count * 100 / @problem.team.users.count).round(0) %>');
+$('#like-rate<%= @problem.id %>').css('width', '<%= (@problem.likes.count * 100 / @problem.team.users.count).round(0) %>%');
