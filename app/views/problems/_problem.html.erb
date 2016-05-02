@@ -9,7 +9,7 @@
      <time><%= time_ago_in_words problem.updated_at %>前</time>
    </div>
   <div class="YES">
-    <% if problem.likes.count * 100 / problem.team.users.count > 50 %>
+    <% if problem.likes.count * 100 / problem.team.users.count > 50 && problem.user.id == current_user.id %>
       <% if problem.done == 0 %>
         <%= link_to '実行中にする', edit_problem_path(problem.id) %>
       <% elsif problem.done == 1 %>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%;">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%;" id="like-rate<%= problem.id %>">
           <p><%= (problem.likes.count * 100 / problem.team.users.count).round(0) %>%</p>
       </div>
     </div>
@@ -42,5 +42,4 @@
     <div id="like-count<%= problem.id %>">
       <%= problem.likes.count %>人がいいねと言っています
     </div>
-
 </section>
