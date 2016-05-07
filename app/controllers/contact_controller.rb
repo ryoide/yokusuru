@@ -11,7 +11,7 @@ class ContactController < ApplicationController
 					   			  content: create_params[:content])
 
 		##############メール送信###############
-		ContactMailer.post_email(@contact).deliver
+		ContactMailer.post_email(@contact).deliver_now
 
 		redirect_to :root and return
 	end

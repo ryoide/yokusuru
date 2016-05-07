@@ -12,6 +12,14 @@
     <%= @user.password %>
   </div>
 
+  <div class="field">
+    <%= f.label :team_name %>
+    <%= f.hidden_field :team_name %>
+    <%= @user.team.name %>
+  </div>
+
+  
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
