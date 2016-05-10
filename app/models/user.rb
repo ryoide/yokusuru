@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   has_many :likes
 
   #validation
-  before_validation :team_name_to_id, if: :has_team_key?
+  before_create :team_name_to_id, if: :has_team_key?
  
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

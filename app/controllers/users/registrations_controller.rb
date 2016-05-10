@@ -5,8 +5,15 @@ before_action :create, only: [:complete]
 
   def confirm 
     @user = User.new(sign_up_params)
+    # チームが存在してるかどうか
+    if Team.exists?(:name => "#{@user.team_name}")
+      @team = Team.find_by(:name => "#{@user.team_name}")
+    else
+      @team = @user
+    end
+
     if @user.valid?
-      render :action => 'confirm'
+     render :action => 'confirm'
     else
      render :action => 'new'
     end
