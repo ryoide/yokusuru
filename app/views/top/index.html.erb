@@ -1,14 +1,14 @@
-  <!-- ここからヘッダー -->
+<!--   
   <div id="top-header">
-      <a href="#">Yokusuru</a><!-- とりあえずロゴができるまでaタグ -->
+      <a href="#">Yokusuru</a>
     <div class="header-right">
       <button type="button" class="btn btn-default" onclick="location.href='/users/sign_in'">ログイン</button>
       <button type="button" class="btn btn-default">ランキング</button>
     </div>
   </div> 
-  <!-- ここまで -->
+  
 
-  <!-- ここから画像のとこ -->
+  
   <div class="top-head">
     <div class="top-image">
       <%= image_tag "ore.png", :class => "col-md-12" %>
@@ -20,10 +20,10 @@
       </div>
     </div>
   </div>
-  <!-- ここまで -->
+  
 
   <div class="gray">
-  <!-- yokusuruとは -->
+  
   <div id="what-we-do" class="block">
     <div class="about-us">
       <p>Yokusuruで何をするの？</p>
@@ -32,9 +32,9 @@
       <p>Yokusuruではチーム内のよくないところとその改善案を投稿し、チーム内で解決します。</br>解決していくとポイントが入り、他のチームとポイントを競い合えます。</p>
     </div>
   </div>
-  <!-- ここまで -->
+  
 
-  <!-- ここからYokusuruとは -->
+  
   <div id="top-body" class="block">
     <div class="about-us">
       <p>Yokusuruの特徴</p>
@@ -77,10 +77,10 @@
       </div>
     </div>
   </div>
-  <!-- ここまで -->
+  
   </div>
 
-  <!-- ここからお問い合わせ -->
+  
   <div id="contact-us" class="block">
     <div class="about-us">
       <p>お問い合わせ</p>
@@ -93,10 +93,166 @@
       <button type="button" class="btn btn-primary" onclick="location.href='/contact/new'">その他お問い合わせ</button>
     </div>
   </div>
-  <!-- ここまで -->
+  
 
-  <!-- ここから新規登録 -->
+  
     <div id="new-account">
       <button type="button" class="btn btn-primary">さっそく始める！</button>
+    </div> -->
+
+
+<body style="margin:0;">
+  <nav class="nav1">
+    <h2>Yokusuru</h2>
+      <ul>
+        <li><a href="#0">Home</a></li>
+        <li><a href="#0">About</a></li>
+        <li><a href="#0">Ranking</a></li>
+        <li><a href="#0">Login</a></li>
+        <li><a href="#0">Contact</a></li>
+      </ul>
+  </nav>
+  <!-- メイン -->
+
+
+
+  <div class="bg-fixed bg-fixed1" style="background-image: url(<%= asset_path "3.jpg" %>);">
+    <%= image_tag "mask60.png" %>
+      <div class="catch-title">
+        <h2>Let's make your office BETTER!</h2>
+        <p>オフィスをよくするSNS 「Yokusuru」</p>
+      </div>
+      <button onclick="location.href='/users/sign_up'"><h2>新規 登録</h2></button>
+  </div>
+
+  <div class="scroll scroll1">
+    
+    <div class="wrap-scroll1">
+      <h2 style="color:#666666;">◆Yokusuruとは◆</h2>
+      <p style="color:#666666;">
+      <br/><br/><br/>
+      何かを良くすること、自分たちの力で変えていくことに夢中な人へ、言い出せないモヤモヤを抱えている人へ、<br/>
+      <br/>
+      何かを良くすることは本来、楽しいことなのではないでしょうか。必死で進めたプロジェクト、夢中だったゲーム。
+      <br/>前のめりで進んでいく感覚は、何かを良くしていくときに起こるものではないでしょうか。<br/>
+      <br/>
+      今度はそんな感覚を自分たちの空間に向けて、オフィスを良くしてもらえたらいいのではないかと思い、このSNSは生まれました。</p>
     </div>
-  <!-- ここまで -->  
+  </div>
+
+
+
+
+  <div class="scroll scroll2">
+  
+    <div class="wrap">
+
+      <div class="pct">
+        <%= image_tag "Psample1.png" %>
+        <p>なんとなくモヤモヤすることを遊び感覚、軽い気持ちで提案を投稿してみる。</p>
+      </div>
+
+      <div class="pct">
+        <%= image_tag "Psample1.png" %>
+        <p>意外にも半数以上がgood!を押してくれた。提案を「実行」しよう。</p>
+      </div>
+      
+      <div class="pct">
+        <%= image_tag "Psample1.png" %> 
+        <p>実行した提案はやがて企業の「制度」「文化」として根付いていく</p>
+      </div>
+      
+      <div class="pct">
+        <%= image_tag "Psample1.png" %>
+        <p>オフィスが良くなる！いい会社になる！モチベーションが上がって売り上げも上がる！？</p>  
+      </div>
+    
+    </div>
+
+  </div>
+
+
+
+
+
+
+<div class="clearfix">
+  <div class="bg-fixed bg-fixed2" style="background-image: url(<%= asset_path "7.jpg" %>); ">
+    
+  </div>
+
+  <div class="scroll scroll3">
+    <h2>◆ユーザーインタビュー(事例)◆</h2>
+    <P>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</P>
+  </div>
+</div>
+  
+
+
+
+  <div class="scroll scroll4">
+    
+    <div class="wrap2">
+    <h2>◆yokusuruの特徴◆</h2>
+    </div>
+
+    <div class="wrap3">
+    <h2><br/><br/><br/>◇使いやすい◇</h2>
+    <p>投稿1つ１つが【提案中】【改善中】【改善完了】でカテゴリー分けされているので見やすく管理できます。
+    コンパクトなタブによってまとまっているのでチャットツールのように流れていかないのでいちいち投稿を探す必要がありません。
+    <br/><br/><br/>
+    </p>
+    <h2>◇楽しい◇</h2>
+    <p>投稿数や投稿の進捗状況に応じてKP(改善ポイント)が反映され、ランキングに登録されます。より多くKPを獲得しランキングを競い合いましょう！
+    <br/><br/><br/>
+    </p>
+    <h2>◇完全無料◇</h2>
+    <p>どれだけオフィスをよくしても一切コストはかかりません！むしろ生産性があがり業績が上がるかもしれません！どんどんオフィスをよくしていきましょう！
+    <br/><br/><br/>
+    </p>
+    </div>
+  </div>
+
+  <div class="bg-fixed bg-fixed3" style="background-image: url(<%= asset_path "2.jpg" %>);">
+
+    <div class="scroll5">
+      <div class="contacts">
+        <h2>お問い合わせ</h2>
+
+            <div class="form-group"> 
+              <div>
+                <br> <input placeholder="お名前" type="text" name="contact[name]">
+              </div> 
+              <div>
+                <br> <input placeholder="E-Mail" type="text" name="contact[mail]">
+              </div>
+              <div>
+                <br> <input placeholder="件名" type="text" name="contact[subject]">
+              </div>
+              <div>
+                <br><textarea placeholder="内容" type="text" name="contact[content]"></textarea>
+              </div>
+              <div>
+                <br><input type="submit" name="commit" value="送信">
+              </div>
+        </div>
+    </div>
+
+    <div class="links">
+      <a href="#"><p>利用規約</p></a>
+      <a href="#"><p>運営</p></a>
+      <a href="#"><p>その他なんか</p></a>
+      <a href="#"><p>その他なんか</p></a>
+      <a href="#"><p>その他なんか</p></a>
+    </div>
+
+
+    <div class="kaizenoh">
+    <h1>さぁ、改善王を目指そう</h1>
+    </div>
+
+
+      <button onclick="location.href='/users/sign_up'"><h2>新規 作成</h2>></button>
+    </div>
+
+  </div>
