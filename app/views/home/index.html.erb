@@ -25,10 +25,10 @@
 	<div class="boxA">
   		<div class="home-center">
   			<% if current_user.team.problems.where(done: 0).exists? == false %>
-				<div>
-					<p>投稿がありません</p>
-				<div>	
-			<% end %>
+				  <div>
+					 <p>投稿がありません</p>
+				  <div>	
+			  <% end %>
 			<div id="problem">
     			<%= render partial: 'problems/problem', collection: @problems %>
 			</div>

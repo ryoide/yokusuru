@@ -5,11 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yokusuru</title>
+  <% if request.path_info != '/' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <% else %>
+  <%= stylesheet_link_tag    'top', media: 'all', 'data-turbolinks-track' => true %>
+  <% end %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <!-- Bootstrap -->
-  <link href="../assets/stylesheets/bootstrap.min.css" rel="stylesheet">
+  <% if request.path_info != '/' %>
+    <!-- Bootstrap -->
+    
+  <% end %>
   
 </head>
 <body>
