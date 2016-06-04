@@ -28,7 +28,7 @@ button{
 }
 
 button:hover{
-	background-color: rgba(50%,50%,50%,3.0);	
+	background-color: orange;  /*rgba(50%,50%,50%,3.0);	*/
 }
 
 button h2{
@@ -40,6 +40,7 @@ button h2{
 
 a{
 	text-decoration: none;
+	color: #666666
 }
 
 body a:hover{
@@ -69,19 +70,57 @@ ul{
 
 /*ヘッダー*/
 
-.nav1{
-	height: 40px;
+.nav0{
 	width: 100%;
+	height: 40px;
 	background-color: white;
 	box-shadow: 0 1px 2px gray;
-	margin: 0;
-	vertical-align: middle;
+	margin:0;
 }
 
-.nav ul {
-  float: left;	
-  margin: 0;
+.nav1{
+	height: 40px;
+	width: 10%;
+	vertical-align: middle;
+	float: left;
 }
+
+.nav1 h2{
+	margin:0;
+}
+
+.nav2{
+	height: 40px;
+	width: 85%;
+	float: right;
+	margin-right: 5%;
+	text-align: right;
+	
+}
+
+.nav2 ul {
+	margin:0;
+	font-size: 0; 
+	height: 40px;
+	
+}
+
+.nav2 li{
+	display: inline-block;
+  	font-size: 20px;
+  	margin-left:5%;
+}
+
+.nav2 a{
+	vertical-align: middle;
+	display: table-cell;
+	height: 40px;
+}
+
+
+
+
+
 
 /*ヘッダーここまで*/
 
@@ -95,97 +134,91 @@ ul{
 .bg-fixed1{
 	height: 90%;
 	position: relative;
+
 }
 
 .bg-fixed1 img{
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	bottom: 0;
 }
 
 .catch-title{
 	position: absolute;
-	bottom: 45%;
-	width: 100%;
-	text-align: center;
+	top:20%; left: 15%;
+	width: 85%;
+	text-align: left;
 }
 
 .catch-title h2{
-	display:inline;
 	color: white;
 	font-size: 120px;
 	margin-left: 0;
 }
 
-.catch-title p{
+.catch-title h1{
 	font-size: 40px;
 	margin-left: 0;
 	color: white;
 }
 
-.bg-fixed1 button{
+.wrap-bg-button{
 	position: absolute;
-	bottom: 25px; right: 45%;
-
+	top:63%;
+	width: 100%;
+	text-align: center;
+	z-index: 3;
 }
 
 
-@media only screen and (max-width: 1000px){
+.bg-fixed1 button{
+	display: inline-block;
 
+}
 
-
+@media only screen and (max-width: 1420px){
 	.catch-title h2{
-	font-size: 35px;
+	 	font-size: 90px;
+	}
+}
 
+@media only screen and (max-width: 1070px){
+	.catch-title{
+		text-align: center;
+		position: absolute;
+		top: 20%;	left: 0%;
+		width: 100%;
 	}
 
+	.catch-title h2{
+	 	font-size: 60px;
+	}
 
-
-
-}		
+	.catch-title h1{
+	 	font-size: 25px;
+	}
+}
 
 @media only screen and (max-width: 768px){
 
-	
-	.bg-fixed1 img{
-	height: 35%;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
+	.bg-fixed1{
+		height: 80%;
 	}
-
-	.catch-title{
-	position: absolute;
-	bottom:20%;
-	width: 100%;
-	}
-
-
-	.bg-fixed1 button{
-	position: absolute;
-	bottom: 15px; left: 1%;
-	height: 120px;
-	width: 98%
-	}
-
-	.bg-fixed1 button h2{
-	font-size: 45px;
-	}
-
-
-}
-
-@media only screen and (max-width: 545px){
 
 	.catch-title h2{
-	font-size: 30px;
-
+	 	font-size:50px;
 	}
 
+	.catch-title h1{
+	 	font-size: 20px;
+	}	
+
+	.wrap-bg-button{
+		position: absolute;
+		top:50%;
+
 }
-
-
+}
 /*一段目終わり
 2段目*/
 
@@ -203,38 +236,33 @@ ul{
 	vertical-align: middle; 
 }
 
-@media only screen and (max-width: 545px){
-
+@media only screen and (max-width: 640px){
 	.scroll1{
-	height: 700px;
-	width: 100%;
-	background-color: #ffffff;
-	display: table;
-	}
-
-
-	.wrap-scroll1 :not(h2){
-	display: inline-block;
-	vertical-align: middle; 
-	text-align: left;
-	}
-
+	height: 800px;	
+}
 
 }
+
 /*二段目終わり
 三段目*/
 
 
-
 .scroll2{
-	height: 1000px;
+	height: 800px;
 	background-color: #f6f6f6;	
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.cover{
+	text-align: center;
+	margin: 10% 0 0 0;
 }
 
 .wrap{
-	width: 80%;
+	width: 100%;
 	height: 900px;
-	margin:0 10% 0 10%; 
+	/*margin:0 10% 0 10%; */
 	text-align: center;
 	display: table;
 }
@@ -242,7 +270,7 @@ ul{
 
 .pct{
 	width: 200px;
-	margin: 300px 3% auto 3%;
+	margin: 117px 3% auto 3%;
 	display: inline-block;
 	text-align: center;	
 }
@@ -251,6 +279,7 @@ ul{
 .scroll2 img{
 	width: 200px;
 	height: 200px;
+	border:solid 1px white;
 }
 
 .scroll2 p{
@@ -260,31 +289,20 @@ ul{
 	
 }
 
-
-@media only screen and (max-width: 1547px){
+@media only screen and (max-width: 1317px){
 	.scroll2{
-	height: 1400px;
-	}
-
-	.pct{
-	width: 200px;
-	margin: 200px 3% auto 3%;	
+		height: 1200px
 	}
 
 }
 
-@media only screen and (max-width: 657px){
+@media only screen and (max-width: 640px){
 	.scroll2{
-	height: 2000px;
+		height: 2000px
 	}
 
-	.pct{
-	width: 200px;
-	margin: 150px 3% auto 3%;	
-	}
 
 }
-
 
 /*三段目*/
 
@@ -303,9 +321,13 @@ ul{
 	z-index: 1;
 	background-color: white;
 	float: left;
+	display: table;
 }
 
-
+.wrap-sc3{
+	display: table-cell;
+	vertical-align: middle;
+}
 
 
 .clearfix:after{
@@ -313,6 +335,19 @@ ul{
 	content: "";
 	clear: both;
 }
+
+@media only screen and (max-width: 1317px){
+	.bg-fixed2{
+		width: 100%;
+		height: 200px;
+	}
+
+	.scroll3{
+		width: 100%;
+	}
+
+}
+
 
 
 /*三段目終わり
@@ -323,7 +358,7 @@ ul{
 
 
 .scroll4{
-	height: 800px;
+	height: 900px;
 	background-color: #f6f6f6;
 	display: table-cell;
  	vertical-align: middle;
@@ -342,13 +377,21 @@ ul{
 	color: #666666;
 }
 
+@media only screen and (max-width: 768px){
+	.scroll4{
+		height: 1000px;
+	}
+}
+
+
+
 
 
 /*四段目終わり
 五段目*/
 
 .bg-fixed3{
-	height: 120%;
+	height: 115%;
 	position: relative;
 }
 
@@ -367,15 +410,15 @@ ul{
 .contacts{
 	text-align: left;
 	height: 500px;
-	width: 300px;
+	width: 70%;
 	position: absolute;
-	top:120px; left: 30%;
+	top:120px; left: 10%;
 }
 
 .form-group input{
 	resize: none;
 	height: 50px;
-	width: 470px;
+	width: 50%;
 	font-size: 30px;
 }
 
@@ -383,44 +426,34 @@ ul{
 .form-group textarea{
 	resize: none;
 	height: 250px;
-	width: 600px;
+	width: 65%;
 	font-size: 30px;
 }
 
+@media only screen and (max-width: 1024px){
+	.contacts{
+		width: 80%;		
+	}
+
+	.form-group input{
+		width: 100%;
+	}
+
+	.form-group textarea{
+		width: 100%;
+
+	}
+
+}
+
+
+
+
+/*五段目おわり*/
+/*六段目*/
 
 
 .scroll6{
-	height: 650px;
-	background-color: #f6f6f6;
-	position: relative;
-}
-
-.links{
-	text-align: left;
-	height: 500px;
-	width: 300px;
-	position: absolute;
-	top:120px; left: 30%;
-}
-
-.links a{ 
-	text-decoration: none;
-}
-
-
-.links p{
-	font-size: 30px;
-	margin-top: 30px;
-	color: #666666;
-}
-
-
-
-
-
-/*footer*/
-
-.scrool7{
 	height: 600px;
 	background-color:black; 
 }
@@ -437,15 +470,71 @@ ul{
 }
 
 
-.scrool7 button{
+.scroll6 button{
 	height: 200px;
 	width: 200px;
-	margin-top: 50px;
+	margin-top: 40px;
+}
+
+
+@media only screen and (max-width: 1125px){
+	.kaizenoh h1{
+	font-size: 80px;
+	
+	}
+}
+@media only screen and (max-width: 881px){
+
+	.kaizenoh h1{
+		font-size: 50px;
+	
+	}
+}
+
+@media only screen and (max-width: 551px){
+	.kaizenoh h1{
+		font-size: 40px;
+	
+	}
+
 }
 
 
 
+/*６段目終わり*/
+/*footer*/
 
-/*五段目終わり*/
+
+
+.scroll7{
+	height: 400px;
+	background-color: #f6f6f6;
+	position: relative;
+}
+
+.links{
+	text-align: left;
+	height: auto;
+	width: 300px;
+	position: absolute;
+	top:60px; left: 15%;
+}
+
+.links a{ 
+	text-decoration: none;
+}
+
+
+.links p{
+	font-size: 20px;
+	margin-top: 20px;
+	color: #666666;
+}
+
+#copyright{
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+}
+
 
 /*firefox*/

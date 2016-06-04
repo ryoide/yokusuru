@@ -1,117 +1,18 @@
-<!--   
-  <div id="top-header">
-      <a href="#">Yokusuru</a>
-    <div class="header-right">
-      <button type="button" class="btn btn-default" onclick="location.href='/users/sign_in'">ログイン</button>
-      <button type="button" class="btn btn-default">ランキング</button>
-    </div>
-  </div> 
-  
-
-  
-  <div class="top-head">
-    <div class="top-image">
-      <%= image_tag "ore.png", :class => "col-md-12" %>
-      <div class="top-text">
-        <p>チームを「よくする」プラットフォームをここに。</p>
-      </div>
-      <div class="top-new-account">
-        <button type="button" class="btn btn-primary" onclick="location.href='/users/sign_up'">新規登録</button>
-      </div>
-    </div>
-  </div>
-  
-
-  <div class="gray">
-  
-  <div id="what-we-do" class="block">
-    <div class="about-us">
-      <p>Yokusuruで何をするの？</p>
-    </div>
-    <div class="top-instraction">
-      <p>Yokusuruではチーム内のよくないところとその改善案を投稿し、チーム内で解決します。</br>解決していくとポイントが入り、他のチームとポイントを競い合えます。</p>
-    </div>
-  </div>
-  
-
-  
-  <div id="top-body" class="block">
-    <div class="about-us">
-      <p>Yokusuruの特徴</p>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="top-body-image">
-          <%= image_tag "heart.png", :width => "150px", :height => "150px" %>
-        </div>
-        <div class="concept">
-          <p>使いやすい！</p>
-        </div>
-        <div class="text">
-          <p>チーム改善専用のため管理がしやすく、投稿が流れにくい。</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="top-body-image">
-          <%= image_tag "battle.png", :width => "150px", :height => "150px" %>
-        </div>
-        <div class="concept">
-          <p>競い合える！</p>
-        </div>
-        <div class="text">
-          <p>サービスを利用するほど改善ポイントが貯まっていき、<br/>その合計点で全ユーザーで競い合います。</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="top-body-image">
-          <%= image_tag "free.png", :width => "150px", :height => "150px" %>
-        </div>
-        <div class="concept">
-          <p>完全無料！</p>
-        </div>
-        <div class="text">
-          <p>どれだけ投稿しても、どれだけ人数を増やしても、<br/>yokusuruの利用には費用は一切かかりません。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  </div>
-
-  
-  <div id="contact-us" class="block">
-    <div class="about-us">
-      <p>お問い合わせ</p>
-    </div>
-    <div class="contact-us-left">
-      <p>yokusuruではサービスを一緒によくするスタッフを募集しております。お気軽にご連絡ください。また、その他お問い合わせもお待ちしております。</p>
-    </div>
-    <div class="contact-us-right">
-      <button type="button" class="btn btn-primary" onclick="location.href='/contact/new'">運営スタッフに応募</button>
-      <button type="button" class="btn btn-primary" onclick="location.href='/contact/new'">その他お問い合わせ</button>
-    </div>
-  </div>
-  
-
-  
-    <div id="new-account">
-      <button type="button" class="btn btn-primary">さっそく始める！</button>
-    </div> -->
-
-
 <body style="margin:0;">
-  <nav class="nav1">
+<!-- ヘッダー -->
+
+<nav class="nav0">
+  <div class="nav1">
     <h2>Yokusuru</h2>
-      <ul>
-        <li><a href="#0">Home</a></li>
-        <li><a href="#0">About</a></li>
-        <li><a href="#0">Ranking</a></li>
-        <li><a href="#0">Login</a></li>
-        <li><a href="#0">Contact</a></li>
-      </ul>
-  </nav>
+  </div>
+  <div class="nav2">
+  <ul>
+      <li><a href="#0">About</a></li>
+      <li><a href="#0">Ranking</a></li>
+      <li><a href="#0">Login</a></li>
+  </ul>
+  </div>
+</nav>
   <!-- メイン -->
 
 
@@ -120,9 +21,11 @@
     <%= image_tag "mask60.png" %>
       <div class="catch-title">
         <h2>よくするって面白い！</h2>
-        <p style="color: #F9f9f9;">オフィスをよくするSNS 「Yokusuru」</p>
+        <h1>オフィスをよくするSNS 「Yokusuru」</h1>
       </div>
-      <button onclick="location.href='/users/sign_up'"><h2>新規 登録</h2></button>
+  </div>
+  <div class="wrap-bg-button">
+    <button onclick="location.href='/users/sign_up'"><h2>新規 登録</h2></button>
   </div>
 
   <div class="scroll scroll1">
@@ -146,24 +49,27 @@
   <div class="scroll scroll2">
   
     <div class="wrap">
+      <div class="cover">
+          <h2>◆ご利用の流れ◆</h2>
+        </div>
 
       <div class="pct">
-        <%= image_tag "Psample1.png" %>
+        <%= image_tag "11.PNG" %>
         <p>なんとなくモヤモヤすることを遊び感覚、軽い気持ちで提案を投稿してみる。</p>
       </div>
 
       <div class="pct">
-        <%= image_tag "Psample1.png" %>
+        <%= image_tag "22.PNG" %>
         <p>意外にも半数以上がgood!を押してくれた。提案を「実行」しよう。</p>
       </div>
       
       <div class="pct">
-        <%= image_tag "Psample1.png" %> 
+        <%= image_tag "33.PNG" %> 
         <p>実行した提案はやがて企業の「制度」「文化」として根付いていく</p>
       </div>
       
       <div class="pct">
-        <%= image_tag "Psample1.png" %>
+        <%= image_tag "44.PNG" %>
         <p>オフィスが良くなる！いい会社になる！モチベーションが上がって売り上げも上がる！？</p>  
       </div>
     
@@ -182,11 +88,13 @@
   </div>
 
   <div class="scroll scroll3">
+    <div class="wrap-sc3">
     <h2>◆利用事例◆</h2>
     <h3>他部署との関わりを強めたい</h3>
-    <p>会社が大きくなって、人も増え、他部署の人とほとんど関わる機会が減った。同僚なのに顔も知らない人を作らないために、まずは関わりを持ちたかった。なので他部署の人とランチを食べに行ったら1人につき1000円支給される制度を作りました。</p></br></br></br>
-    <h3></h3>
-    <p></p>
+      <p>会社が大きくなって、人も増え、他部署の人とほとんど関わる機会が減った。同僚なのに顔も知らない人を作らないために、まずは関わりを持ちたかった。なので他部署の人とランチを食べに行ったら1人につき1000円支給される制度を作りました。</p></br></br></br>
+      <h3></h3>
+      <p></p>
+    </div>
   </div>
 </div>
   
@@ -220,30 +128,33 @@
 
     <div class="scroll5">
       <div class="contacts">
-        <h2>お問い合わせ</h2>
-
-            <div class="form-group"> 
-              <div>
-                <br> <input placeholder="お名前" type="text" name="contact[name]">
-              </div> 
-              <div>
-                <br> <input placeholder="E-Mail" type="text" name="contact[mail]">
-              </div>
-              <div>
-                <br> <input placeholder="件名" type="text" name="contact[subject]">
-              </div>
-              <div>
-                <br><textarea placeholder="内容" type="text" name="contact[content]"></textarea>
-              </div>
-              <div>
-                <br><input type="submit" name="commit" value="送信">
-              </div>
+        <%= form_for @contact, url: contact_index_path do |f| %>
+      <h2>お問い合わせ</h2>
+        <div class="form-group"> 
+          <div>
+            <br /><%= f.text_field :name, placeholder: 'お名前' %>
+          </div> 
+          <div>
+            <br /><%= f.text_field :mail, placeholder: 'E-Mail' %>
+          </div>
+          <div>
+            <br /><%= f.text_field :subject, placeholder: '件名' %>
+          </div>
+          <div>
+            <br /><%= f.text_area :content, placeholder: '内容' %>
+          </div>
+          <div class="col-lg-12">
+            <br /><%= f.submit "送信", :class => 'btn btn-primary withripple' %>
+          </div>
         </div>
+    <% end %>
       </div>
     </div>
   </div>
 
-   <div class="scroll scrool7">
+   <!-- ７段目 -->
+
+    <div class="scroll scroll6">
       <div class="kaizenoh">
       <h1>さぁ、改善王を目指そう</h1>
       </div>
@@ -255,14 +166,17 @@
     </div>
 
 
-<footer class="scroll scroll6">
+<footer class="scroll scroll7">
 
     <div class="links">
-      <a href="#"><p>利用規約</p></a>
+      <a href="#"><p>Top</p></a>
+      <a href="#"><p>ランキング</p></a>
       <a href="#"><p>運営</p></a>
-      <a href="#"><p>その他なんか</p></a>
-      <a href="#"><p>その他なんか</p></a>
-      <a href="#"><p>その他なんか</p></a>
+      <a href="top/privacy"><p>プライバシーポリシー</p></a>
+      <a href="/top/usage"><p>利用規約</p></a>
+    </div>
+    <div id="copyright">
+      &copy;Yokusuru
     </div>
   </footer>
 

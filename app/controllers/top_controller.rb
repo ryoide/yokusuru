@@ -1,8 +1,11 @@
 class TopController < ApplicationController
 		before_action :home
 	def index
+		@contact = Contact.new
 	end
 
+	def privacy
+	end
 
 	private
 

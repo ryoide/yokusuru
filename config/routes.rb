@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     post 'users/sign_up/complete' => 'users/registrations#complete' 
   end
   root 'top#index'
+  get  'top/privacy' => 'top#privacy'
+  get  'top/usage'   => 'top#usage'
   get  'home' => 'home#index'
   resources :users, :only => [:show, :edit, :update, :destroy]
   resources :teams, :only => [:show, :edit, :update]
