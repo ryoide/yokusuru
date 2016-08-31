@@ -1,33 +1,35 @@
-<body style="background-image:url(<%= asset_path "yy.png" %>); margin: 0;">
+<body style="margin: 0;background-color: #f8f1e8;">
 <%= render partial: 'common/header' %>
 
 <!-- ここからメイン -->
 <div class="fixing-base">
-
+<div class="home-center">
 	<div class="side-bar">
-    	<a class="teian1" href="javascript:;" onclick="Display('proposal')" ><p class="sidemenu1" id="SW1">提案中</p></a>
-	    <a class="zikkou2" href="javascript:;" onclick="Display('doing')"><p class="sidemenu2" id="SW2">実行中</p></a>
+    <a class="teian1" href="javascript:;" onclick="Display('proposal')" ><p class="sidemenu1" id="SW1">提案中</p></a>
+	  <a class="zikkou2" href="javascript:;" onclick="Display('doing')"><p class="sidemenu2" id="SW2">実行中</p></a>
 
-    	<div class="copyright">
-      		<p>Copyright &copy; Yokusuru</p>
-    	</div>
-  	</div>
+    <div class="copyright">
+      <p>Copyright &copy; Yokusuru</p>
+    </div>
+  </div>
+  <div class="right-bar">
+    <h3>ランキング</h3>
+  </div>
 
 	<div class="boxA">
-  		<div class="home-center">
-  			<% if current_user.team.problems.where(done: 0).exists? == false %>
-				  <div>
-					 <p>投稿がありません</p>
-				  <div>	
-			  <% end %>
-			<div id="problem">
-    			<%= render partial: 'problems/problem', collection: @problems %>
-			</div>
-			<div id="proposal" style="display:none;">
-    			<%= render partial: 'problems/problem', collection: @proposals %>
-			</div>
-  		</div>
+  		<% if current_user.team.problems.where(done: 0).exists? == false %>
+				<div>
+					<p>投稿がありません</p>
+				<div>	
+			<% end %>
+		  <div id="problem">
+    	 <%= render partial: 'problems/problem', collection: @problems %>
+		  </div>
+		  <div id="proposal" style="display:none;">
+    	 <%= render partial: 'problems/problem', collection: @proposals %>
+		  </div>
 	</div>
+</div>
 </div>
 <!-- 説明タブ -->
 <!-- フッターは無し -->
