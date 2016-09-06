@@ -12,6 +12,15 @@
   <% end %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta property="og:title" content="あなたのチームをよくするwebツール" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" 
+   content="http://http://yokusuru.tokyo/home" />
+  <meta property="og:site_name" content="Yokusuru" />
+  <meta property="og:description" 
+   content="会議に出すほどでもないけどなんかモヤモヤすることありませんか？Yokusuruでそのモヤモヤを共有してみたら、同じことを考えてる人が他にもいるかもしれません。" />
+  <meta property="og:image" 
+   content="yokusuru.png">
   <% if request.path_info != '/' %>
     <!-- Bootstrap -->
     
