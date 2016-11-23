@@ -7,8 +7,8 @@
   </div>
   <div class="nav2">
   <ul>
-      <li><a href="#0">About</a></li>
-      <li><a href="#0">Ranking</a></li>
+      <li><a href="#about">About</a></li>
+      <li><%= link_to "Ranking", team_ranking_path %></li>
       <li><a href="/users/sign_in">Login</a></li>
   </ul>
   </div>
@@ -28,18 +28,19 @@
     <button onclick="location.href='/users/sign_up'"><h2>新規 登録</h2></button>
   </div>
 
-  <div class="scroll scroll1">
-    
-    <div class="wrap-scroll1">
-      <h2 style="color:#666666;">◆Yokusuruとは◆</h2>
-      <p style="color:#666666;">
-      <br/><br/><br/>
-      何かを良くすること、自分たちの力で変えていくことに夢中な人へ、言い出せないモヤモヤを抱えている人へ、<br/>
-      <br/>
-      何かを良くすることは本来、楽しいことなのではないでしょうか。必死で進めたプロジェクト、夢中だったゲーム。
-      <br/>前のめりで進んでいく感覚は、何かを良くしていくときに起こるものではないでしょうか。<br/>
-      <br/>
-      今度はそんな感覚を自分たちの空間に向けて、オフィスを良くしてもらえたらいいのではないかと思い、このSNSは生まれました。</p>
+  <div id="about">
+    <div class="scroll scroll1">
+      <div class="wrap-scroll1">
+        <h2 style="color:#666666;">◆Yokusuruとは◆</h2>
+        <p style="color:#666666;">
+        <br/><br/><br/>
+        何かを良くすること、自分たちの力で変えていくことに夢中な人へ、言い出せないモヤモヤを抱えている人へ、<br/>
+        <br/>
+        何かを良くすることは本来、楽しいことなのではないでしょうか。必死で進めたプロジェクト、夢中だったゲーム。
+        <br/>前のめりで進んでいく感覚は、何かを良くしていくときに起こるものではないでしょうか。<br/>
+        <br/>
+        今度はそんな感覚を自分たちの空間に向けて、オフィスを良くしてもらえたらいいのではないかと思い、このSNSは生まれました。</p>
+      </div>
     </div>
   </div>
 
@@ -160,7 +161,7 @@
       </div>
 
 
-      <button><h2>新規 作成</h2></button>
+      <button onclick="location.href='/users/sign_up'"><h2>新規 登録</h2></button>
     
 
     </div>
@@ -180,4 +181,3 @@
     </div>
   </footer>
 </body>
-

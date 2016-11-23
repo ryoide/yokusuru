@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get  'top/privacy' => 'top#privacy'
   get  'top/usage'   => 'top#usage'
   get  'home' => 'home#index'
+  get  'team_ranking' => 'ranking#team_show'
   resources :users, :only => [:show, :edit, :update, :destroy]
   resources :teams, :only => [:show, :edit, :update]
   resources :problems, :only => [:new, :create, :show, :edit, :update]
