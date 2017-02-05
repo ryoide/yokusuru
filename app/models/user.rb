@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   #association
   belongs_to :team
-  has_many :problems, ->{ order("updated_at DESC") }, :dependent => :destroy
+  has_many :problems, :dependent => :destroy,foreign_key: [:id]
   has_many :likes
 
   #validation
@@ -41,7 +41,15 @@ class User < ActiveRecord::Base
   end
  
   def team_name_to_id
-    team = Team.where(name: team_name).first_or_create
+    # team = Team.where(name: team_name).first_or_create
+    if Team.where(name: team_name).exists?
+      # チームがあったらそのチームに入れる
+      team = Team.where(name: team_name).first_or_create
+    else
+      # なかったら作成
+      team = Team.where(name: team_name, point: 0).create
+    end
+    
     self.team_id = team.id
   end
 end

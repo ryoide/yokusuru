@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417065612) do
+ActiveRecord::Schema.define(version: 20161127003243) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 20160417065612) do
     t.integer  "done",       limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "status",     limit: 4
+    t.date     "suggest"
+    t.date     "doing"
+    t.date     "finish"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -50,6 +54,7 @@ ActiveRecord::Schema.define(version: 20160417065612) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
+    t.integer  "point",              limit: 4
   end
 
   create_table "users", force: :cascade do |t|

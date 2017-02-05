@@ -9,7 +9,7 @@ before_action :create, only: [:complete]
     if Team.exists?(:name => "#{@user.team_name}")
       @team = Team.find_by(:name => "#{@user.team_name}")
     else
-      @team = @user
+      @team = params[:team_name]
     end
 
     if @user.valid?
